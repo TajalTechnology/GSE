@@ -45,6 +45,19 @@ class List{
         }
         return toStringValue;
     }
+
+    join(x){
+        let current = this.head;
+
+        while(current){
+            let nextNode = current.next;
+            current.next = new Node(x);
+            current.next.next = nextNode
+            current = current.next.next
+        }
+
+        console.log(this.head)
+    }
 }
 
 const linkedList = new List();
@@ -59,6 +72,11 @@ linkedList.pop()
 linkedList.pop()
 linkedList.pop()
 linkedList.pop()
+
+
+
+// join 
+linkedList.join(2);
 
 // print all the value
 const print = linkedList.print();
