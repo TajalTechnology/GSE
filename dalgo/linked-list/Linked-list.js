@@ -70,6 +70,17 @@ class List{
         this.head = new Node(x);
         this.head.next = currentHead;
     }
+
+    count(){
+        let sum = 0;
+        let current = this.head;
+
+        while(current){
+            sum +=1;
+            current = current.next;
+        }
+        return sum;
+    }
 }
 
 const linkedList = new List();
@@ -99,3 +110,8 @@ linkedList.push(30)
 
 // TODO: unshift
 // linkedList.unshift(7);
+
+
+// TODO:
+// const count = linkedList.count();
+// console.log(count)
