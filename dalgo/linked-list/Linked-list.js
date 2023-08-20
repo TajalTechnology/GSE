@@ -81,6 +81,23 @@ class List{
         }
         return sum;
     }
+
+    insertAt(index, value){
+        
+        if(index === 0) this.head = new Node(value, this.head);
+        else{
+            let i = 0;
+            let current = this.head;
+            while(current){
+                if(i === index-1){
+                    current.next = new Node(value, current.next);
+                    break;
+                }
+                current = current.next;
+                i++;
+            }
+        }
+    }
 }
 
 const linkedList = new List();
@@ -101,10 +118,6 @@ linkedList.push(30)
 // TODO: join 
 // linkedList.join(2);
 
-// TODO: print all the value
-// const print = linkedList.print();
-// console.log(print);
-
 // TODO: shift
 // linkedList.shift()
 
@@ -115,3 +128,10 @@ linkedList.push(30)
 // TODO:
 // const count = linkedList.count();
 // console.log(count)
+
+//TODO: insertAt(index, value);
+// linkedList.insertAt(5, 5);
+
+// TODO: print all the value
+const print = linkedList.print();
+console.log('PRINT:',print);
