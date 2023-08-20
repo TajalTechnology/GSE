@@ -58,6 +58,18 @@ class List{
 
         console.log(this.head)
     }
+
+    shift(){
+        if(this.head){
+            this.head = this.head.next
+        }else return
+    }
+
+    unshift(x){
+        const currentHead = this.head;
+        this.head = new Node(x);
+        this.head.next = currentHead;
+    }
 }
 
 const linkedList = new List();
@@ -67,17 +79,23 @@ linkedList.push(10)
 linkedList.push(20)
 linkedList.push(30)
 
-// pop value from linkedList
-linkedList.pop()
-linkedList.pop()
-linkedList.pop()
-linkedList.pop()
+// TODO: pop value from linkedList
+// linkedList.pop()
+// linkedList.pop()
+// linkedList.pop()
+// linkedList.pop()
 
 
 
-// join 
-linkedList.join(2);
+// TODO: join 
+// linkedList.join(2);
 
-// print all the value
-const print = linkedList.print();
-console.log(print);
+// TODO: print all the value
+// const print = linkedList.print();
+// console.log(print);
+
+// TODO: shift
+// linkedList.shift()
+
+// TODO: unshift
+// linkedList.unshift(7);
