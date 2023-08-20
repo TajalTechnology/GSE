@@ -35,13 +35,31 @@ class List{
         this.size --;
         console.log('36',this.size,':::', this.head);
     }
+
+    print(){
+        let toStringValue = '';
+        let current = this.head;
+        while(current){
+            toStringValue += current.element +'>';
+            current = current.next;
+        }
+        return toStringValue;
+    }
 }
 
 const linkedList = new List();
+
+// push value in node
 linkedList.push(10)
 linkedList.push(20)
 linkedList.push(30)
+
+// pop value from linkedList
 linkedList.pop()
 linkedList.pop()
 linkedList.pop()
 linkedList.pop()
+
+// print all the value
+const print = linkedList.print();
+console.log(print);
