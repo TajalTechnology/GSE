@@ -1,19 +1,19 @@
 Linked List Method:
 
-[] push()
+[ ] push()
 
-[] pop()
+[ ] pop()
 
-[] toString()
+[ ] toString()
 
-[] join()
+[ ] join()
 
-[] shift()
+[ ] shift()
 
-[] unshift()
+[ ] unshift()
 
-[] concat()
+[ ] concat()
 
-[] count()
+[ ] count()
 
-[] insertAt()
+[ ] insertAt()
