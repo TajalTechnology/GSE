@@ -98,6 +98,22 @@ class List{
             }
         }
     }
+
+    removeFrom(index){
+        let i = 0;
+        let current = this.head;
+
+        while(current){
+            if(i === index-1){
+                current.next = current.next.next;
+                break;
+            }
+            current = current.next;
+            i++;
+        }
+
+        console.log('115',this.head);
+    }
 }
 
 const linkedList = new List();
@@ -131,6 +147,10 @@ linkedList.push(30)
 
 //TODO: insertAt(index, value);
 // linkedList.insertAt(5, 5);
+
+
+//TODO: removeFrom
+linkedList.removeFrom(1);
 
 // TODO: print all the value
 const print = linkedList.print();
