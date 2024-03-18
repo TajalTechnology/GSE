@@ -72,6 +72,22 @@ class LinkListMethods{
         }
         console.log(`========<>deleteAtIndex ${index}`,this.head);
     }
+    reverse(){
+        console.log(`========<>Before reverse`,this.head);
+        let currentNode = this.head;
+        let assignNode;
+        while(currentNode.nextAddress){
+            const node = new Node(currentNode.head);
+            node.nextAddress = assignNode;
+            assignNode = node;
+            currentNode = currentNode.nextAddress;
+        }
+        const node = new Node(currentNode.head);
+        node.nextAddress = assignNode;
+        this.head = node
+
+        console.log(`========<>After reverse`,this.head);
+    }
 }
 
 const list = new LinkListMethods();
@@ -81,3 +97,4 @@ list.insertAtEnd(1)
 list.insertAtPosition(9, 2)
 list.insertAtFirst(10)
 list.deleteAtIndex(4);
+list.reverse();
