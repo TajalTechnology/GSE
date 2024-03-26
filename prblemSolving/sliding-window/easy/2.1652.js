@@ -28,7 +28,6 @@ var decrypt = function(code, k) {
                 loops = kIndex + (k * -1);
             }
             for (let j = kIndex; j < loops; j++) {
-                console.log(kIndex, j, j % (code.length));
                 count ++;
                 sum += code[j % (code.length)]
             }
